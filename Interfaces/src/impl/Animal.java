@@ -1,5 +1,5 @@
 package impl;
 
-public abstract class Animal {
+public abstract class Animal implements Edible, Comparable<Animal> {
 	public abstract String makeSound();
 }

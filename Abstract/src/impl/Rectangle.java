@@ -35,11 +35,25 @@ public class Rectangle extends GeometricObject {
 		this.width = width;
 	}
 	
+	@Override
 	public double getArea(){
 		return width * height;
 	}
 	
+	@Override
 	public double getPerimiter(){
 		return 2* (width + height); 
 	}
+	
+	@Override
+	public int compareTo(GeometricObject o) {
+		if (getArea() > o.getArea()){
+			return 1;
+		}
+		if (getArea() < o.getArea()){
+			return -1;
+		}
+		
+		return 0;
+	}	
 }

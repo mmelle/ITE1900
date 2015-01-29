@@ -1,5 +1,5 @@
 package impl;
 
-public class Fruit {
+public abstract class Fruit implements Edible{
 
 }

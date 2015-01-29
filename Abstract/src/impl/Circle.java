@@ -23,11 +23,25 @@ public class Circle extends GeometricObject{
 		this.radius = radius;
 	}
 	
+	@Override
 	public double getArea(){
 		return radius * radius * Math.PI;
 	}
 	
+	@Override
 	public double getPerimiter(){
 		return 2 * radius * Math.PI;
+	}
+
+	@Override
+	public int compareTo(GeometricObject o) {
+		if (getArea() > o.getArea()){
+			return 1;
+		}
+		if (getArea() < o.getArea()){
+			return -1;
+		}
+		
+		return 0;
 	}	
 }

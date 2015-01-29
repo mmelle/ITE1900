@@ -2,10 +2,7 @@ package impl;
 
 import java.util.Date;
 
-public class GeometricObject {
-	public class Circle {
-
-	}
+public abstract class GeometricObject implements Comparable<GeometricObject> {
 
 	private String color = "white";
 	private boolean isFilled;
@@ -18,6 +15,7 @@ public class GeometricObject {
 	public GeometricObject(String color, boolean isFilled) {
 		this.color = color;
 		this.isFilled = isFilled;
+		dateCreated = new Date();
 	}
 
 	public String getColor() {
@@ -39,5 +37,8 @@ public class GeometricObject {
 	public Date getDateCreated() {
 		return dateCreated;
 	}
+
+	public abstract double getArea();
+	public abstract double getPerimiter();
 
 }
